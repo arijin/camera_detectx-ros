@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: darknet_d
+Description: Description of darknet_d
+Version: 1.8.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp sensor_msgs std_msgs cv_bridge image_transport

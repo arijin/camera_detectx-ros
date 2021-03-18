@@ -1,0 +1,8 @@
+prefix=/home/arijin/桌面/camera_detectx-ros/darknet-d/build/devel
+
+Name: darknet_d
+Description: Description of darknet_d
+Version: 1.8.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp sensor_msgs std_msgs cv_bridge image_transport
