@@ -181,7 +181,8 @@ int main(int argc, char **argv)
   }
   
   if(_pnh.getParam("camera_info_dir", camera_info_dir)){
-    infoInit(camera_info_dir);
+    std::cout << camera_info_dir << std::endl;
+    // infoInit(camera_info_dir);
   }  
   _pnh.param("image_topic_name", image_topic_name, std::string("/image_raw"));
   if(!(_pnh.getParam("names_file", names_file))){
@@ -193,8 +194,6 @@ int main(int argc, char **argv)
     return 0 ;
   }
 
-
-  std::cout << camera_info_dir << std::endl;
   std::cout << names_file << std::endl;
   std::cout << engine_file << std::endl;
 
