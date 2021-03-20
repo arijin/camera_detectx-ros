@@ -1,0 +1,26 @@
+%YAML:1.0
+---
+image_width: 1920
+image_height: 1020
+camera_name: leopard_left
+camera_matrix: !!opencv-matrix
+  rows: 3
+  cols: 3
+  dt: d
+  data: [1971.361028990327, 0, 962.9965936140409, 0, 2001.06823904104, 430.5668621804219, 0, 0, 1]
+distortion_model: plumb_bob
+distortion_coefficients: !!opencv-matrix
+  rows: 1
+  cols: 5
+  dt: d
+  data: [-0.5698221566532873, 0.2660626838266996, 0.02376959340246599, 0.0006266188388461396, 0]
+rectification_matrix: !!opencv-matrix
+  rows: 3
+  cols: 3
+  dt: d
+  data: [1, 0, 0, 0, 1, 0, 0, 0, 1]
+projection_matrix: !!opencv-matrix
+  rows: 3
+  cols: 4
+  dt: d
+  data: [1655.955078125, 0, 966.1326738809003, 0, 0, 1930.581665039062, 434.635113902732, 0, 0, 0, 1, 0]
