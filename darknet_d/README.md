@@ -19,17 +19,19 @@ $roslaunch usb_cam usb_cam-test.launch
 
 2、识别(以coco数据集为例)
 
-权重文件：[yolov4-tiny.weight](https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_pre/yolov4-tiny.weights)或者[yolov4.weight](https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights)需自行下载；模型配置文件及coco数据集类别文件，都已经提供了。
+权重文件：[yolov4-tiny.weight](https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_pre/yolov4-tiny.weights)或者[yolov4.weight](https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights)需自行下载；模型配置文件及coco数据集类别文件，都已经提供了。但是注意`camera_detectx-ros/darknet_d/lib`中的`libdarknet.so`需要使用darknet的[源码](https://github.com/AlexeyAB/darknet)自行生成并替换。
 
-使用`rostopic list`查看图像所在话题。
+使用`rostopic list`查看图像所在话题。修改`camera_detectx-ros/darknet_d/launch`中darknet_d.launch的图像话题等参数。
 
 ```bash
+$cd $YOUR_WORKSPACE$/catkin_ws/src  # 这里是~，也就是/home/$YOUR_NAME$
 $git clone https://github.com/arijin/camera_detectx-ros
 $cd camera_detectx-ros
 $cp darknet_d $YOUR_WORKSPACE$/catkin_ws/src
 $cd $YOUR_WORKSPACE$/catkin_ws
 $catkin_make -DCATKIN_WHITELIST_PACKAGES="darknet_d"
-
+$source devel/setup.bash
+$roslaunch darknet_d darknet_d.launch
 ```
 
 
